@@ -13,7 +13,7 @@ void profit_sorting(float profit[],float weight[],int size,int cap){
 			swap(profit[j],profit[largest]);
 			swap(weight[j],weight[largest]);
 	}
-	cout<<"Profit is    ";
+	cout<<"\nProfit is    ";
 	for(int i=0;i<size;i++){
 		cout<<profit[i]<<" ";
 	}
@@ -116,7 +116,7 @@ for(int i=0;i<size;i++){
 			break;
 		}
 	}
-	cout<<"\nMaximum profit is "<<max_profit;
+	cout<<"\nMaximum profit is "<<max_profit<<endl;
 	}
 void knapsack(float profit[],float w[],int size,int cap){
 	profit_sorting(profit, w, size, cap);
@@ -137,6 +137,10 @@ int main(){
 		profit[i]=rand()%100;
 		cout<<"\nEnter profit of "<<i<<" index is="<<profit[i];
 	}
+	clock_t start=clock();
 	knapsack(profit,w,size,cap);
+	clock_t end=clock();
+	  double elapsed_time = double(end - start) / CLOCKS_PER_SEC;
+    cout << "\nExecution time: " << elapsed_time << " seconds" << endl;
 	return 0;
 }
