@@ -30,7 +30,6 @@ void activitySelection(vector<Activity> activities) {
 int main() {
     vector<Activity> activities = {{1, 3}, {2, 5}, {3, 9}, {0, 6}, {5, 7}, {8, 9}};
     
-    activitySelection(activities);
-    
+    activitySelection(activities); 
     return 0;
 }
